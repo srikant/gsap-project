@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import gsap from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Navbar from './sections/NavBar'
+import FirstVideo from './sections/FirstVideo'
+import SecondVideo from './sections/SecondVideo'
+import PostCard from './sections/PostCard'
+import Final from './sections/Final'
+import Outro from './sections/Outro'
+import ComingSoon from './sections/ComingSoon'
+import Lucia from './sections/Lucia'
+import Jason from './sections/Jason'
+import Hero from './sections/Hero'
+gsap.registerPlugin(ScrollTrigger);
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main>
+       <Navbar />
+       <Hero />
+       <FirstVideo />
+       <Jason />
+       <SecondVideo />
+       <Lucia />
+       <PostCard />
+       <Final />
+       <Outro />
+    </main>
   )
 }
-
 export default App
